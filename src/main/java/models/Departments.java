@@ -14,11 +14,11 @@ public class Departments {
         return name;
     }
 
-    public String getAbout() {
+    public String getDescription() {
         return description;
     }
 
-    public int getBirthYear() {
+    public int getEmployes() {
         return employes;
     }
 }
