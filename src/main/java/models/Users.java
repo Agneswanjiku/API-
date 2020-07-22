@@ -1,4 +1,7 @@
 package models;
+
+import java.util.Objects;
+
 public class Users {
     private String position;
     private String roles;
@@ -11,10 +14,27 @@ public class Users {
     }
 
     public String getName() {
+
         return position;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Users)) return false;
+        Users users = (Users) o;
+        return employes == users.employes &&
+                position.equals(users.position) &&
+                roles.equals(users.roles);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(position, roles, employes);
+    }
+
     public String getAbout() {
+
         return roles;
     }
 
