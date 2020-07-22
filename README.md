@@ -20,7 +20,7 @@ If you want to put out a pull request you first have to send us the sample code 
 Versioning
 We use Github for versioning. This is the first version of this application
 
-#License
+License
  This project is licensed under the MIT License - see the LICENSE file for details
 
 #Acknowledgments
