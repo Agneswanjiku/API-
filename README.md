@@ -11,7 +11,7 @@ you can reach me via email @ shikonorman@gmail.com
 or 
 contact me @ 0797089772
 
-#Technology used
+Technology used
 i used pure java to create the app.
 
 #Contributing
