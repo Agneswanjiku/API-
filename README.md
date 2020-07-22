@@ -17,7 +17,7 @@ i used pure java to create the app.
 Contributing
 If you want to put out a pull request you first have to send us the sample code that you want to add to our repository for cross-checking before we allow the pull.
 
-#Versioning
+Versioning
 We use Github for versioning. This is the first version of this application
 
 #License
