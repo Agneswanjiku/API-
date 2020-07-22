@@ -1,6 +1,5 @@
 package Dao;
 
-import dao.Connection;
 import models.Departments;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
@@ -8,9 +7,9 @@ import org.sql2o.Sql2oException;
 
 import java.util.List;
 
-public abstract class Sql2oDepartmentDao implements DepartmentsDao {
+public abstract class Sql2oDepartmentsDao implements DepartmentsDao {
     private final Sql2o sql2o;
-    public Sql2oDepartmentDao(Sql2o sql2o) { this.sql2o = sql2o; }
+    public Sql2oDepartmentsDao(Sql2o sql2o) { this.sql2o = sql2o; }
 
     @Override
     public void add(Departments departments) {
@@ -20,7 +19,7 @@ public abstract class Sql2oDepartmentDao implements DepartmentsDao {
                     .bind(departments)
                     .executeUpdate()
                     .getKey();
-            review.setId(id);
+            departments.setId(id);
         } catch (Sql2oException ex) {
             System.out.println(ex);
         }
@@ -29,16 +28,16 @@ public abstract class Sql2oDepartmentDao implements DepartmentsDao {
     @Override
     public List<Departments> getAll() {
         try (Connection con = sql2o.open()) {
-            return con.createQuery("SELECT * FROM reviews")
+            return con.createQuery("SELECT * FROM departments")
                     .executeAndFetch(Departments.class);
         }
     }
 
     @Override
-    public List<Departments> getAllReviewsByRestaurant(int restaurantId) {
+    public List<Departments> getAlldDepartmentRestaurant(int departmentId) {
         try (Connection con = sql2o.open()) {
-            return con.createQuery("SELECT * FROM reviews WHERE restaurantId = :restaurantId")
-                    .addParameter("restaurantId", restaurantId)
+            return con.createQuery("SELECT * FROM departments WHERE departmentId = :restaurantId")
+                    .addParameter("departmentId", departmentId)
                     .executeAndFetch(Departments.class);
         }
     }

@@ -8,9 +8,9 @@ import org.sql2o.Sql2oException;
 
 import java.util.List;
 
-public class Sql2oReviewDao implements NewsDao {
+public class Sql2oNewsDao implements NewsDao {
     private final Sql2o sql2o;
-    public Sql2oReviewDao(Sql2o sql2o) { this.sql2o = sql2o; }
+    public Sql2oNewsDao(Sql2o sql2o) { this.sql2o = sql2o; }
 
     @Override
     public void add(News news) {
@@ -35,12 +35,13 @@ public class Sql2oReviewDao implements NewsDao {
     }
 
     @Override
-    public List<News> getAllnByResNews(int newsid) {
-        try (Connection con = sql2o.open()) {
-            return con.createQuery("SELECT * FROM News WHERE newsId = :newsId")
-                    .addParameter("newsId", newsId)
-                    .executeAndFetch(News.class);
-        }
+    public News findById(int id) {
+        return null;
+    }
+
+    @Override
+    public void update(int id, String name, String address, String zipcode, String phone, String website, String email) {
+
     }
 
     @Override
