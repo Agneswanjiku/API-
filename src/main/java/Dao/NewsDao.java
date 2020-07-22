@@ -12,10 +12,10 @@ public interface NewsDao {
     //read
     List<News> getAll();
     News findById(int id);
-    // List<Foodtype> getAllFoodtypesForARestaurant(int restaurantId);
+    // List<News> getAllFoodtypesForNews(String collageId);
 
     //update
-    void update(int id, String name, String address, String zipcode, String phone, String website, String email);
+    void update( String name, String address);
 
     //delete
     void deleteById(int id);

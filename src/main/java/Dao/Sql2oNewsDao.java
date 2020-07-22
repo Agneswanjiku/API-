@@ -1,6 +1,5 @@
 package Dao;
 
-import Dao.NewsDao;
 import dao.Connection;
 import models.News;
 import org.sql2o.Sql2o;
@@ -37,6 +36,11 @@ public class Sql2oNewsDao implements NewsDao {
     @Override
     public News findById(int id) {
         return null;
+    }
+
+    @Override
+    public void update(String name, String address) {
+
     }
 
     @Override

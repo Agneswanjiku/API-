@@ -5,6 +5,7 @@ import java.util.Objects;
 public class News {
     private String clientNews;
     private String collegeNews;
+    private  String name;
 
     public News(String clientNews, String collegeNews) {
         super();

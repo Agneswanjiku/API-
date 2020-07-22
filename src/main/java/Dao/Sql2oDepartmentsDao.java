@@ -34,7 +34,7 @@ public abstract class Sql2oDepartmentsDao implements DepartmentsDao {
     }
 
     @Override
-    public List<Departments> getAlldDepartmentRestaurant(int departmentId) {
+    public List<Departments> getAlldDepartment(int departmentId) {
         try (Connection con = sql2o.open()) {
             return con.createQuery("SELECT * FROM departments WHERE departmentId = :restaurantId")
                     .addParameter("departmentId", departmentId)
