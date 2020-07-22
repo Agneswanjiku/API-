@@ -8,7 +8,7 @@ Java - The language used Intellij Idea - Intergated development Spark - Framewor
 
 Contact details
 you can reach me via email @ shikonorman@gmail.com
-#or 
+or 
 contact me @ 0797089772
 
 #Technology used
