@@ -58,4 +58,23 @@ public class Departments {
     public int hashCode() {
         return Objects.hash(getName(), address, phone, website, email, id);
     }
+
+    public void setId(int id) {
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public int getId() {
+        return id;
+    }
 }

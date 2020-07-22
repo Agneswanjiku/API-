@@ -33,6 +33,11 @@ public class Users {
         return Objects.hash(position, roles, employes);
     }
 
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+
     public String getAbout() {
 
         return roles;

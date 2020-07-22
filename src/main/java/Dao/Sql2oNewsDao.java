@@ -1,10 +1,10 @@
 package Dao;
 
-import dao.Connection;
 import models.News;
 import org.sql2o.Sql2o;
 import org.sql2o.Sql2oException;
 
+import org.sql2o.Connection;
 import java.util.List;
 
 public class Sql2oNewsDao implements NewsDao {
@@ -13,7 +13,7 @@ public class Sql2oNewsDao implements NewsDao {
 
     @Override
     public void add(News news) {
-        String sql = "INSERT INTO reviews (writtenby, content, rating, newsid) VALUES (:writtenBy, :content, :rating, :newsId)"; //if you change your model, be sure to update here as well!
+        String sql = "INSERT INTO reviews (clientNews collageNews) VALUES (:clientNews, :collageNews)"; //if you change your model, be sure to update here as well!
         try (Connection con = sql2o.open()) {
             int id = (int) con.createQuery(sql, true)
                     .bind(news)
@@ -43,10 +43,10 @@ public class Sql2oNewsDao implements NewsDao {
 
     }
 
-    @Override
-    public void update(int id, String name, String address, String zipcode, String phone, String website, String email) {
-
-    }
+//    @Override
+//    public void update(int id, String name, String address, String zipcode, String phone, String website, String email) {
+//
+//    }
 
     @Override
     public void deleteById(int id) {

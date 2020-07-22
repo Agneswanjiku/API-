@@ -5,7 +5,7 @@ import java.util.Objects;
 public class News {
     private String clientNews;
     private String collegeNews;
-    private  String name;
+    private int id;
 
     public News(String clientNews, String collegeNews) {
         super();
@@ -47,5 +47,16 @@ public class News {
     @Override
     public int hashCode() {
         return Objects.hash(getClientNews(), getCollegeNews());
+    }
+
+    public void setId(int id) {
+    }
+
+    public int getid() {
+        return id;
+    }
+
+    public int getId() {
+        return id;
     }
 }
