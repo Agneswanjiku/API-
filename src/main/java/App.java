@@ -3,9 +3,9 @@ import Dao.Sql2oNewsDao;
 import Dao.Sql2oUsersDao;
 import com.google.gson.Gson;
 import exceptions.ApiException;
-import models.Departments;
-import models.News;
-import models.Users;
+import exception.models.Departments;
+import exception.models.News;
+import exception.models.Users;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
@@ -112,16 +112,16 @@ public class App {
         });
 
 
-//        //FILTERS
-//        exception(ApiException.class, (exception, req, res) -> {
-//            ApiException err = (ApiException) exception;
-//            Map<String, Object> jsonMap = new HashMap<>();
-//            jsonMap.put("status", err.getStatusCode());
-//            jsonMap.put("errorMessage", err.getMessage());
-//            res.type("application/json");
-//            res.status(err.getStatusCode());
-//            res.body(gson.toJson(jsonMap));
-//        });
+        //FILTERS
+        exception(ApiException.class, (exception, req, res) -> {
+            ApiException err = (ApiException) exception;
+            Map<String, Object> jsonMap = new HashMap<>();
+            jsonMap.put("status", err.getStatusCode());
+            jsonMap.put("errorMessage", err.getMessage());
+            res.type("application/json");
+            res.status(err.getStatusCode());
+            res.body(gson.toJson(jsonMap));
+        });
 
         after((req, res) -> {
             res.type("application/json");

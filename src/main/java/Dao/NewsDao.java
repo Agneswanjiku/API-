@@ -1,6 +1,6 @@
 package Dao;
 
-import models.News;
+import exception.models.News;
 import java.util.List;
 
 public interface NewsDao {

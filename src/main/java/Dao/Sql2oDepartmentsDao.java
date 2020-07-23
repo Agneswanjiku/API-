@@ -1,6 +1,6 @@
 package Dao;
 
-import models.Departments;
+import exception.models.Departments;
 import org.sql2o.Sql2o;
 import org.sql2o.Sql2oException;
 

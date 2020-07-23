@@ -1,6 +1,6 @@
 package Dao;
 
-import models.Departments;
+import exception.models.Departments;
 import java.util.List;
 
 public interface DepartmentsDao {

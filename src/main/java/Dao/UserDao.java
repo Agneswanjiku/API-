@@ -1,6 +1,6 @@
 package Dao;
 
-import models.Users;
+import exception.models.Users;
 import java.util.List;
 
 public interface UserDao {
