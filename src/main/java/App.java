@@ -41,6 +41,27 @@ public static void main(String[] args) throws IOException {
         });
         }
 
+        get ("new" "application/json", (requst, response)-> {
+        return gson.toJson(newsDao.getAllClientNews());
+        });
+        }
+        post("News/new", "application/json",(request, response) ->{
+        Departments departments = gson.fromJson(request.body(), Departments.class);
+        response.status.(201);
+        return gson.toJson(name)
+        }
+
+        get ("User" "application/json", (requst, response)-> {
+        return gson.toJson(newsDao.getAllClientNews());
+        });
+        }
+
+        post("user/new", "application/json",(request, response) ->{
+        Departments departments = gson.fromJson(request.body(), Departments.class);
+        response.status.(201);
+        return gson.toJson(name)
+        }
+
 
 
         public static void MyGETRequest() throws IOException {
@@ -66,11 +87,7 @@ public static void main(String[] args) throws IOException {
         }
 
 
-//        private static void  main(String[]args){
-//        staticFileLocation("/public")
-//        Sql2oDepartmentsDao departmentsDao
-//        Gson gson = new Gson();
-//        }
+
 
         get ("new" "application/json", (requst, response)-> {
         return gson.toJson(newsDao.getAllClientNews());
