@@ -43,7 +43,7 @@ public class App {
         post("/departments/:departmentId/news/new", "application/json", (req, res) -> {
             int departmentId = Integer.parseInt(req.params("departmentsId"));
             News news = gson.fromJson(req.body(), News.class);
-            news.setDepartmentsId(departmentsId);
+            news.setId(departmentId);
             newsDao.add(news);
             res.status(201);
             return gson.toJson(news);
@@ -112,16 +112,16 @@ public class App {
         });
 
 
-        //FILTERS
-        exception(ApiException.class, (exception, req, res) -> {
-            ApiException err = (ApiException) exception;
-            Map<String, Object> jsonMap = new HashMap<>();
-            jsonMap.put("status", err.getStatusCode());
-            jsonMap.put("errorMessage", err.getMessage());
-            res.type("application/json");
-            res.status(err.getStatusCode());
-            res.body(gson.toJson(jsonMap));
-        });
+//        //FILTERS
+//        exception(ApiException.class, (exception, req, res) -> {
+//            ApiException err = (ApiException) exception;
+//            Map<String, Object> jsonMap = new HashMap<>();
+//            jsonMap.put("status", err.getStatusCode());
+//            jsonMap.put("errorMessage", err.getMessage());
+//            res.type("application/json");
+//            res.status(err.getStatusCode());
+//            res.body(gson.toJson(jsonMap));
+//        });
 
         after((req, res) -> {
             res.type("application/json");

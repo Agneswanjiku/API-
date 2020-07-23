@@ -20,4 +20,6 @@ public interface NewsDao {
     //delete
     void deleteById(int id);
     void clearAll();
+
+    List<News> getAllNewsByDepartments(int departmentsId);
 }

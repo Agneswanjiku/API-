@@ -42,4 +42,8 @@ public  class Sql2oDepartmentsDao implements DepartmentsDao{
     public void clearAll() {
 
     }
+
+    public Departments findById(int departmentId) {
+        return  departmentId;
+    }
 }
