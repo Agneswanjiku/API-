@@ -15,7 +15,7 @@ public interface UserDao {
     // List<Foodtype> getAllFoodtypesForARestaurant(int restaurantId);
 
     //update
-    void update(int id, String name, String address, String zipcode, String phone, String website, String email);
+    void update(int id, String name, String address,  String phone, String website, String email);
 
     //delete
     void deleteById(int id);

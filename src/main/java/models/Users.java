@@ -5,12 +5,17 @@ import java.util.Objects;
 public class Users {
     private String position;
     private String roles;
-    private int employes;
+    private String employes;
+    private int id;
 
-    public Users(String position, String role, int employes) {
+    public Users(String position, String role, String employes) {
         this.position = position;
         this.roles = roles;
         this.employes = employes;
+    }
+
+    public static int setId(int id) {
+        return id;
     }
 
     public String getName() {
@@ -43,7 +48,11 @@ public class Users {
         return roles;
     }
 
-    public int getBirthYear() {
-        return employes;
+    public int getId() {
+        return id;
+    }
+
+    public String getroles() {
+        return roles;
     }
 }
