@@ -7,7 +7,7 @@ import org.sql2o.Sql2oException;
 
 import java.util.List;
 
-class Sql2oUsersDao implements UserDao {
+public class Sql2oUsersDao implements UserDao {
     private final Sql2o sql2o;
     public Sql2oUsersDao(Sql2o sql2o) { this.sql2o = sql2o; }
 
